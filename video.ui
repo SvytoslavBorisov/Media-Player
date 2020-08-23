@@ -1,0 +1,408 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>673</width>
+    <height>631</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">background-color: gray;</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <layout class="QGridLayout" name="gridLayout">
+    <item row="0" column="0">
+     <layout class="QVBoxLayout" name="verticalLayout">
+      <item>
+       <spacer name="verticalSpacer">
+        <property name="orientation">
+         <enum>Qt::Vertical</enum>
+        </property>
+        <property name="sizeHint" stdset="0">
+         <size>
+          <width>20</width>
+          <height>40</height>
+         </size>
+        </property>
+       </spacer>
+      </item>
+      <item>
+       <widget class="QSlider" name="hsMusic">
+        <property name="styleSheet">
+         <string notr="true">QSlider {
+border: 0px;
+background: none;
+}
+
+QSlider::groove:horizontal {
+border: 1px solid #bbb;
+background: white;
+height: 10px;
+/*border-radius: 4px;*/
+}
+
+QSlider::sub-page:horizontal {
+background: qlineargradient(x1: 0, y1: 0,    x2: 0, y2: 1,  stop: 0 #66e, stop: 1 #FC0B0B);
+background: qlineargradient(x1: 0, y1: 0.2, x2: 1, y2: 1,  stop: 0 #FC0B0B, stop: 1 #F5ED14);
+border: 1px solid #777;
+height: 14px;
+/*border-radius: 4px;*/
+}
+
+QSlider::add-page:horizontal {
+background: black;
+/*background: qlineargradient(x1: 0, y1: 0,    x2: 0, y2: 1,  stop: 0 #000, stop: 1 #FC0B0B);
+background: qlineargradient(x1: 0, y1: 0.2, x2: 1, y2: 1,  stop: 0 #892919, stop: 1 #000);*/
+border: 1px solid #777;
+height: 14px;
+/*border-radius: 4px;*/
+}
+
+
+QSlider::handle:horizontal {
+/*background: qlineargradient(x1:0, y1:0, x2:1, y2:1, stop:0 #eee, stop:1 #ccc);
+border: 1px solid #777;
+*/
+background: none;
+width: 12px;
+margin-top: -6px;
+margin-bottom: -6px;
+border-radius: 7px;
+}
+
+QSlider::handle:horizontal:hover {
+background: qlineargradient(x1:0, y1:0, x2:1, y2:1, stop:0 #fff, stop:1 #ddd);
+border: 1px solid #444;
+border-radius: 7px;
+}
+
+
+
+QSlider::sub-page:horizontal:disabled {
+background: #bbb;
+border-color: #999;
+}
+
+QSlider::add-page:horizontal:disabled {
+background: #eee;
+border-color: #999;
+}
+
+QSlider::handle:horizontal:disabled {
+background: #eee;
+border: 1px solid #aaa;
+border-radius: 4px;
+}</string>
+        </property>
+        <property name="orientation">
+         <enum>Qt::Horizontal</enum>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <layout class="QHBoxLayout" name="horizontalLayout">
+        <item>
+         <widget class="QPushButton" name="pbStop">
+          <property name="minimumSize">
+           <size>
+            <width>50</width>
+            <height>50</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>50</width>
+            <height>50</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">
+QPushButton{
+	border-radius: 5px;
+	image: url(:/img/Images/stop.png);
+	background-color: none;
+}
+
+QPushButton:hover{
+	border-radius: 5px;
+	border: 1px solid gray;
+	image: url(:/img/Images/stop.png);
+}
+
+QPushButton:checked{
+	border-radius: 5px;
+	image: url(:/img/Images/stop-orange.png);
+}</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="pbPlay">
+          <property name="minimumSize">
+           <size>
+            <width>50</width>
+            <height>50</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>50</width>
+            <height>50</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton{
+	border-radius: 5px;
+	image: url(:/img/Images/play.png);
+	background-color: none;
+}
+
+QPushButton:hover{
+	border-radius: 5px;
+	border: 1px solid gray;
+	image: url(:/img/Images/play.png);
+}
+
+QPushButton:checked{
+	border-radius: 5px;
+	image: url(:/img/Images/play-orange.png);
+}</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="pbPause">
+          <property name="minimumSize">
+           <size>
+            <width>50</width>
+            <height>50</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>50</width>
+            <height>50</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton{
+	border-radius: 5px;
+	image: url(:/img/Images/pause.png);
+	background-color: none;
+}
+
+QPushButton:hover{
+	border-radius: 5px;
+	border: 1px solid gray;
+	image: url(:/img/Images/pause.png);
+}
+
+QPushButton:checked{
+	border-radius: 5px;
+	image: url(:/img/Images/pause-orange.png);
+}</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <spacer name="horizontalSpacer">
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+          <property name="sizeHint" stdset="0">
+           <size>
+            <width>40</width>
+            <height>20</height>
+           </size>
+          </property>
+         </spacer>
+        </item>
+        <item>
+         <widget class="QPushButton" name="pbVolume">
+          <property name="minimumSize">
+           <size>
+            <width>50</width>
+            <height>50</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>50</width>
+            <height>50</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton{
+	border-radius: 5px;
+	image: url(:/img/Images/volume.png);
+	background-color: none;
+}
+
+QPushButton:hover{
+	border-radius: 5px;
+	border: 1px solid gray;
+	image: url(:/img/Images/volume.png);
+}
+
+QPushButton:checked{
+	border-radius: 5px;
+	image: url(:/img/Images/volume-orange.png);
+}</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QSlider" name="hsVolume">
+          <property name="minimumSize">
+           <size>
+            <width>50</width>
+            <height>50</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QSlider {
+border: 0px;
+background: none;
+}
+
+QSlider::groove:horizontal {
+border: 1px solid #bbb;
+background: white;
+height: 3px;
+border-radius: 4px;
+}
+
+QSlider::sub-page:horizontal {
+background: qlineargradient(x1: 0, y1: 0,    x2: 0, y2: 1,  stop: 0 #66e, stop: 1 #FC0B0B);
+background: qlineargradient(x1: 0, y1: 0.2, x2: 1, y2: 1,  stop: 0 #FC0B0B, stop: 1 #F5ED14);
+border: 1px solid #777;
+height: 14px;
+border-radius: 4px;
+}
+
+QSlider::add-page:horizontal {
+background: qlineargradient(x1: 0, y1: 0,    x2: 0, y2: 1,  stop: 0 #000, stop: 1 #FC0B0B);
+background: qlineargradient(x1: 0, y1: 0.2, x2: 1, y2: 1,  stop: 0 #892919, stop: 1 #000);
+
+border: 1px solid #777;
+height: 14px;
+border-radius: 4px;
+}
+
+
+QSlider::handle:horizontal {
+background: qlineargradient(x1:0, y1:0, x2:1, y2:1, stop:0 #eee, stop:1 #ccc);
+border: 1px solid #777;
+width: 12px;
+margin-top: -6px;
+margin-bottom: -6px;
+border-radius: 7px;
+}
+
+QSlider::handle:horizontal:hover {
+background: qlineargradient(x1:0, y1:0, x2:1, y2:1,
+    stop:0 #fff, stop:1 #ddd);
+border: 1px solid #444;
+border-radius: 7px;
+}
+
+
+
+QSlider::sub-page:horizontal:disabled {
+background: #bbb;
+border-color: #999;
+}
+
+QSlider::add-page:horizontal:disabled {
+background: #eee;
+border-color: #999;
+}
+
+QSlider::handle:horizontal:disabled {
+background: #eee;
+border: 1px solid #aaa;
+border-radius: 4px;
+}</string>
+          </property>
+          <property name="orientation">
+           <enum>Qt::Horizontal</enum>
+          </property>
+         </widget>
+        </item>
+        <item>
+         <widget class="QPushButton" name="pbExit">
+          <property name="minimumSize">
+           <size>
+            <width>50</width>
+            <height>50</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>50</width>
+            <height>50</height>
+           </size>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton{
+	border-radius: 5px;
+	image: url(:/img/Images/play.png);
+	background-color: none;
+}
+
+QPushButton:hover{
+	border-radius: 5px;
+	border: 1px solid gray;
+	image: url(:/img/Images/play.png);
+}
+
+QPushButton:checked{
+	border-radius: 5px;
+	image: url(:/img/Images/play-orange.png);
+}</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+        </item>
+       </layout>
+      </item>
+     </layout>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>673</width>
+     <height>21</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
