@@ -3,7 +3,7 @@
 block_cipher = None
 
 
-a = Analysis(['main.py'],
+a = Analysis(['MediaPlayer.py'],
              pathex=['C:\\PythonFiles\\Progect2'],
              binaries=[],
              datas=[],
@@ -23,7 +23,7 @@ exe = EXE(pyz,
           a.zipfiles,
           a.datas,
           [],
-          name='main',
+          name='MediaPlayer',
           debug=False,
           bootloader_ignore_signals=False,
           strip=False,
