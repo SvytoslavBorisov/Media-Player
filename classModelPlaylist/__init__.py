@@ -17,7 +17,7 @@ class ModelForPlaylist(QAbstractTableModel):
         try:
             return len(self.playlist)
         except Exception as e:
-            print('Ошибка модели: ' + e)
+            print('Ошибка модели:', e)
 
     def columnCount(self, parent=None, *args, **kwargs):
         try:
@@ -26,7 +26,7 @@ class ModelForPlaylist(QAbstractTableModel):
             elif self.mode == 'Radio' or self.mode == 'Video':
                 return len(self.horizontalHeaderOfTable) - 1
         except Exception as e:
-            print('Ошибка модели: ' + e)
+            print('Ошибка модели:', e)
 
     def addMusic(self, data):
         self.beginResetModel()
@@ -44,7 +44,7 @@ class ModelForPlaylist(QAbstractTableModel):
             self.playlist = data
             self.endResetModel()
         except Exception as e:
-            print('Ошибка модели: ' + e)
+            print('Ошибка модели:', e)
 
     def active(self, ind):
         self.beginResetModel()
@@ -110,7 +110,7 @@ class ModelForPlaylist(QAbstractTableModel):
                     f.setWeight(QFont.Bold)
                     return f
         except Exception as e:
-            print('Ошибка модели: ' + e)
+            print('Ошибка модели:', e)
 
     def headerData(self, p_int, Qt_Orientation, role=None):
         try:
@@ -119,7 +119,7 @@ class ModelForPlaylist(QAbstractTableModel):
                     return self.horizontalHeaderOfTable[p_int]
             return None
         except Exception as e:
-            print('Ошибка модели: ' + e)
+            print('Ошибка модели:', e)
 
     def flags(self, index):
         try:
@@ -127,7 +127,7 @@ class ModelForPlaylist(QAbstractTableModel):
                 return Qt.ItemIsEnabled | Qt.ItemIsSelectable | Qt.ItemIsEditable
             return Qt.ItemIsEnabled | Qt.ItemIsSelectable
         except Exception as e:
-            print('Ошибка модели: ' + e)
+            print('Ошибка модели:', e)
 
     '''def insertRows(self, position, rows):
         try:
